@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Drama Arena 5100 Documentation - Explore the features and functionalities of the Drama Arena 5100 platform.">
+    <meta name="keywords" content="Drama Arena, 5100, documentation, features, functionalities, platform, da5100, qrda, drama arena 5100, da5100 documentation">
+    <meta name="author" content="#eclipseteam">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Arena 5100 Documentation</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
+
+    <!-- Cloudflare -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/md5.min.js" integrity="sha512-ENWhXy+lET8kWcArT6ijA6HpVEALRmvzYBayGL6oFWl96exmq8Fjgxe2K6TAblHLP75Sa/a1YjHpIZRt+9hGOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <!-- ANTI HACK -->
+    <!-- <script src="https://raw.githubusercontent.com/sanrandry/anti-inspect-element/refs/heads/master/anti-inspect-element.js"></script>
+    <script src="src/scripts/popup.js"></script>
+    <script src="src/scripts/app.js"></script>
+    <script src="src/scripts/blockDevTools.js"></script> -->
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Icon -->
+    <link rel="icon" href="https://da5100.github.io/assets/img/favicon.webp" type="image/png">
+    <!-- <link rel="apple-touch-icon" href="src/img/logo.png"> -->
+
+    <!-- Feather Icon Files -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <script>
+     window.onload = function() {
+        var loaders = document.getElementsByClassName('page-loader');
+        for (var i = 0; i < loaders.length; i++) {
+          loaders[i].style.display = 'none';
+        }
+     };
+  </script>
+  <!-- <noscript>
+    <div style="color: red; font-weight: bold;">
+    JavaScript is disabled in your browser. Please enable it to use this site.
+    </div>
+  </noscript> -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
+
+  <div class="go-up">
+    <i data-feather="chevrons-up"></i>
+  </div>
+  
+  <div class="navmenu">
+      <div class="logo-container">
+        <img src="https://da5100.github.io/assets/img/favicon.webp" alt="Logo DA" class="logo">
+        <h1 class="sitename">Drama Arena</h1>
+        <span>5100</span>
+      </div>
+      <div class="menu">
+        <a href="https://da5100.github.io">Beranda</a>
+        <a href="https://da5100.github.io">Tentang</a>
+        <a href="https://da5100.github.io">Galeri</a>
+        <a href="https://da5100.github.io">Media</a>
+        <a href="https://da5100.github.io">Masukan</a>
+      </div>
+  </div>
+
+    <div data-scroll-container>
+        <div class="hero" data-scroll-section>  
+        <img src="src/img/logo.png" alt="Logo DA" data-scroll data-scroll-speed="1">
+        <a class="discover" data-scroll data-scroll-speed="2" data-scroll-position="top">
+          Discover
+        </a>
+      </div>
+  
+      <div class="gallery" data-scroll-section>
+        <div class="img">
+          <h2>Drama Act 1 : Pesan Penyangkalan</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="reverse img">
+          <h2>Drama Act 2 : Pesan Amarah</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="img">
+          <h2>Drama Act 3 : Pesan Negoisasi</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="reverse img">
+          <h2>Drama Act 4 : Pesan Peringatan</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="img">
+          <h2>Tong Pu Gaya</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="reverse img">
+          <h2>Drama Kabaret</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="img">
+          <h2>Hadroh 5100</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+        <div class="reverse img">
+          <h2>Nari Manari Basamo</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem quis enim animi commodi omnis mollitia consequuntur deserunt deleniti dolores impedit.</p>
+        </div>
+      </div>
+  
+      <div class="text-animation" data-scroll-section>
+       <span>Drama Arena</span>
+       <span>Eksis Menjaga Identitas Dinamis Menuju Kualitas</span>
+       <span>Five Art Collaboration</span>
+       <span>Five A Hundred</span>
+       <span>5100</span>
+      </div>
+
+      <div class="swiper .iframe-parent" id="swiper" data-scroll-section>
+          <iframe class="swiper-embed" src="slider.html" data-scroll data-scroll-speed="0"></iframe>
+        </div>
+
+      <div style="height:200vh;" class="extender"></div>
+  
+    </div>
+
+
+    <ul class="navbar" data-scroll-section>
+      <li data-page="beranda" class="navItem .nav-beranda"><i data-feather="home"></i></i><a href="https://da5100.github.io">Beranda</a></li>
+      <li data-page="tentang" class="navItem .nav-tentang"><i data-feather="info"></i><a href="https://da5100.github.io">Tentang</a></li>
+      <li data-page="galeri" class="navItem .nav-galeri"><i data-feather="image"></i><a href="https://da5100.github.io">Galeri</a></li>
+      <li><i data-feather="camera"></i><a href="https://da5100.github.io/qrda/">Media</a></li>
+      <li data-page="harapan" class="navItem .nav-harapan"><i data-feather="message-square"></i><a href="https://da5100.github.io">Masukan</a></li>
+    </ul>
+     <!-- <div id="smooth-scroll"></div> -->
+
+
+    <script src="src/scripts/main.js"></script>
+    <!-- <script>
+  const scrollContainer = document.getElementById('smooth-scroll');
+  let currentScroll = 0;
+  let targetScroll = 0;
+  const ease = 0.07; // Semakin kecil = semakin lambat dan smooth
+
+  function smoothScroll() {
+    targetScroll = window.scrollY || window.pageYOffset;
+    currentScroll += (targetScroll - currentScroll) * ease;
+    scrollContainer.style.transform = `translateY(${-currentScroll}px)`;
+    requestAnimationFrame(smoothScroll);
+  }
+
+  // Set height body sesuai tinggi konten scrollContainer
+  function setBodyHeight() {
+    document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`;
+  }
+
+  window.addEventListener('resize', () => {
+    rotateImagesOnScroll();});
+  window.addEventListener('load', () => {
+    rotateImagesOnScroll()
+    smoothScroll();
+  });
+</script> --> 
+    
+    <script>
+       const goUp = document.getElementsByClassName('go-up')[0];
+
+    goUp.addEventListener('click', () => {
+      scroll.scrollTo(0); // Scroll to the top (position 0)
+    });
+
+    const discoverButton = document.querySelector('.discover');
+    discoverButton.addEventListener('click', () => {
+    const swiper = document.querySelector('.swiper'); // Replace with your actual last element's class or ID
+    if (swiper) {
+      scroll.scrollTo(swiper, {duration: 18000, easing: [.66,.4,1,.93],});
+    }});
+    </script>
+    <script>
+        function rotateImagesOnScroll() {
+  const gallery = document.querySelector('.gallery');
+  const images = gallery ? gallery.querySelectorAll('.img') : [];
+  const viewportHeight = window.innerHeight;
+  const centerThreshold = 10;
+
+  images.forEach((img, index) => {
+    const rect = img.getBoundingClientRect();
+    const imgCenter = rect.top + rect.height / 2;
+    const screenCenter = viewportHeight / 2;
+    const distanceFromCenter = imgCenter - screenCenter;
+
+    // --- TranslateX slow when near center ---
+    const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
+    const slowZone = 2.5; // Semakin kecil, semakin tertahan di tengah
+    const easedOffset = Math.pow(offsetRatio, slowZone);
+    let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
+    translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
+
+    // --- Scale ---
+    const scaleValue = (Math.abs(distanceFromCenter) < centerThreshold) ? 1.2 : 1;
+
+    // --- Rotation ---
+    let rotateValue = (index % 2 === 0)
+      ? 2 + (20 * distanceFromCenter / viewportHeight)
+      : -2 - (20 * distanceFromCenter / viewportHeight);
+
+    // --- Apply style ---
+    img.style.transform = `translateX(${translateXValue}px)rotate(${rotateValue}deg)`;
+    img.style.filter = `brightness(${1 - Math.abs(distanceFromCenter) / viewportHeight})`;
+    img.style.transition = 'transform 0.3s ease, filter 0.3s ease';
+
+    // --- Text Animation ---
+  const textAnimation = document.querySelector('.text-animation');
+  const textSpans = textAnimation ? textAnimation.querySelectorAll('span') : [];
+
+  textSpans.forEach((span, index) => {
+    const rect = span.getBoundingClientRect();
+    const spanCenter = rect.top + rect.height / 2;
+    const screenCenter = viewportHeight / 2;
+    const distanceFromCenter = spanCenter - screenCenter;
+
+    const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
+    const slowZone = 2.5;
+    const easedOffset = Math.pow(offsetRatio, slowZone);
+    let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
+    translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
+
+    span.style.transform = `translateX(${translateXValue}px)`;
+    // span.style.filter = `brightness(${1 - Math.abs(distanceFromCenter) / viewportHeight})`;
+    span.style.transition = 'transform 0.3s ease';
+  });
+  });
+}
+
+        document.addEventListener('DOMContentLoaded', rotateImagesOnScroll);
+        document.addEventListener('resize', rotateImagesOnScroll);
+        document.addEventListener('load', rotateImagesOnScroll);
+        
+    </script>
+    <script>
+      const scroll = new LocomotiveScroll({
+          el: document.querySelector("[data-scroll-container]"),
+          smooth: true,
+          smoothMobile: true,        // aktifkan smooth di mobile
+          touchMultiplier: 0.5,        // meningkatkan respons gerakan sentuhan
+          lerp: 0.03,
+          multiplier: 0.5,
+          smartphone: {
+            smooth: true,
+            multiplier: 0.3,
+            breakpoint: 0            // aktifkan untuk semua ukuran smartphone
+          },
+          tablet: {
+            smooth: true,
+            // multiplier: 1,
+            breakpoint: 0            // aktifkan untuk tablet juga
+          },
+          reloadOnContextChange: true
+      });
+
+      scroll.on('scroll', () => {
+        rotateImagesOnScroll();
+      });
+
+      window.addEventListener('load', () => {
+        rotateImagesOnScroll();
+        scroll.update();
+      });
+    </script>
+    <script>
+      // Elemen target
+const stopElement = document.querySelector('#swiper');
+let stopped = false;
+
+scroll.on('scroll', (obj) => {
+  if (stopped) return;
+
+  const scrollY = obj.scroll.y; // posisi scroll sekarang
+  const elementTop = stopElement.offsetTop; // posisi dari atas container
+
+  // Threshold: berhenti tepat saat atas #swiper ketemu viewport
+  if (scrollY >= elementTop) {
+    stopped = true;
+
+    // Scroll paksa ke posisi awal #swiper
+    scroll.scrollTo(elementTop, { duration: 200 });
+    scroll.stop(); // hentikan animasi Locomotive
+
+    // Blok input scroll mouse & sentuh
+    window.addEventListener('wheel', preventScroll, { passive: false });
+    window.addEventListener('touchmove', preventScroll, { passive: false });
+  }
+});
+
+function preventScroll(e) {
+  e.preventDefault();
+}
+    </script>
+    <!-- Feather Icon JS -->
+  <script>
+    feather.replace();
+  </script>
+</html>

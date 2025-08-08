@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drama Arena Documentacion</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-0 { transition-delay: 0ms; }
+    .delay-1 { transition-delay: 100ms; }
+    .delay-2 { transition-delay: 200ms; }
+
+    /* Modal */
+    .modal {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(20px);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .modal.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="bg-black text-white overflow-hidden">
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" style="background-image: url('src/img/full.webp')">
+  <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+    <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Susunan Acara</h2>
+    <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">Untuk Anda Yang Ingin Menonton Sesuai Urutan Acara.</p>
+    <button
+      onclick="openModal(this)"
+      class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+      data-title="Susunan Acara"
+      data-items='[
+        { "text": "1. Visual Protokol", "url": "https://www.youtube.com/watch?v=bIsYvpgj0xc" },
+        { "text": "2. Visual Opening", "url": "#" },
+        { "text": "3. Hadroh", "url": "#" },
+        { "text": "4. Visual Sapa Mc", "url": "#" },
+        { "text": "5. Master of Ceremony", "url": "#" },
+        { "text": "6. Tilawah Ayat Suci Al-Quran", "url": "#" },
+        { "text": "7. Master of Ceremony", "url": "#" },
+        { "text": "8. Sambutan Ketua Drama Arena", "url": "#" },
+        { "text": "9. Master of Ceremony", "url": "#" },
+        { "text": "10. Sambutan Pimpinan", "url": "#" },
+        { "text": "11. Cahaya Imaji", "url": "#" },
+        { "text": "12. Visual : Five Assemble", "url": "#" },
+        { "text": "13. Choir-l-Ummah", "url": "#" },
+        { "text": "14. EQ Band : Trimurti", "url": "#" },
+        { "text": "15. Visual-Pesan Pertama", "url": "#" },
+        { "text": "16. Grand Opening", "url": "#" },
+        { "text": "17. Drama Act 1 : Pesan Penyangkalan", "url": "#" },
+        { "text": "18. Voice Musthafa : Sing-Off NASGOR", "url": "#" },
+        { "text": "19. Visual Nyatakan Kebenaran", "url": "#" },
+        { "text": "20. T.O.J Tongue of Justice", "url": "#" },
+        { "text": "21. NasyiDA", "url": "#" },
+        { "text": "22. MC Non Formal", "url": "#" },
+        { "text": "23. Drama Act 2 : Pesan Amarah", "url": "#" },
+        { "text": "24. Visual : Nusantara Berpadu Ria", "url": "#" },
+        { "text": "25. Nadham Rencong", "url": "#" },
+        { "text": "26. Somba-Somba Diraja", "url": "#" },
+        { "text": "27. Wiroyudho", "url": "#" },
+        { "text": "28. Manari-Nari Basamo", "url": "#" },
+        { "text": "29. Tatarucingan", "url": "#" },
+        { "text": "30. Satrio Kencono", "url": "#" },
+        { "text": "31. Tong PU Gaya", "url": "#" },
+        { "text": "32. Nusantara Berpadu Ria", "url": "#" },
+        { "text": "33. Dialog : Identitas Gawat Darurat", "url": "#" },
+        { "text": "34. EQ Band : Bongkar", "url": "#" },
+        { "text": "35. Visual : Milliu Membentuk Perilaku", "url": "#" },
+        { "text": "36. Drama Act 3 : Pesan Negoisasi", "url": "#" },
+        { "text": "37. DA n DOET : Darah Muda", "url": "#" },
+        { "text": "38. Ini Tok Show", "url": "#" },
+        { "text": "39. EQ Band : Jangan Remehkan", "url": "#" },
+        { "text": "40. Iklan Aqalin", "url": "#" },
+        { "text": "41. Hunza Balistani", "url": "#" },
+        { "text": "42. KINJAZ : Kage Sutairu", "url": "#" },
+        { "text": "43. ASEAN Fusiun", "url": "#" },
+        { "text": "44. Slava Rhythm", "url": "#" },
+        { "text": "45. ZonZero", "url": "#" },
+        { "text": "46. Phantomystica", "url": "#" },
+        { "text": "47. Maqsop D.K.I", "url": "#" },
+        { "text": "48. Drama Act 4 : Pesan Peringatan", "url": "#" },
+        { "text": "49. Visual : Ceritanya Berakhir", "url": "#" },
+        { "text": "50. Pesan Terakhir : Penerimaan", "url": "#" },
+        { "text": "51. Grand Closing : Pulang", "url": "#" }
+      ]'
+      ]'
+    >
+      Tonton Sekarang
+    </button>
+  </div>
+</div>
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide" style="background-image: url('src/img/musik.webp')">
+        <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Musik</h2>
+            <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Nada-nada mengalun, menjadi jiwa di balik drama yang bicara tanpa kata."</p>
+            <button
+            onclick="openModal(this)"
+            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+            data-title="Seni Musik"
+            data-items='[
+              { "text": "Hadroh", "url": "#" },
+              { "text": "Voice Musthafa : Sing-Off NASGOR", "url": "#" },
+              { "text": "Choir-l-Ummah", "url": "#" },
+              { "text": "NasyiDA", "url": "#" },
+              { "text": "EQ Band : Bongkar", "url": "#" },
+              { "text": "DA n DOET", "url": "#" },
+              { "text": "EQ Band : Jangan Remehkan", "url": "#" },
+              { "text": "Grand Closing : Pulang", "url": "#" }
+            ]'
+            >
+            Tonton Sekarang
+            </button>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background-image: url('src/img/teater.webp')">
+        <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Teater</h2>
+          <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Seni teater di Drama Arena berdenyut dalam cahaya, menjelmakan kata menjadi jiwa di atas panggung."</p>
+            <button
+            onclick="openModal(this)"
+            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+            data-title="Seni Teater"
+            data-items='[
+              { "text": "Drama Act 1 : Pesan Penyangkalan", "url": "#" },
+              { "text": "T.O.J Tongue of Justice", "url": "#" },
+              { "text": "Drama Act 2 : Pesan Amarah", "url": "#" },
+              { "text": "Dialog : Identitas Gawat Darurat", "url": "#" },
+              { "text": "Drama Act 3 : Pesan Negoisasi", "url": "#" },
+              { "text": "Ini Tok Show", "url": "#" },
+              { "text": "Phantomystica", "url": "#" },
+              { "text": "Maqsop D.K.I", "url": "#" },
+              { "text": "Drama Act 4 : Pesan Peringatan", "url": "#" },
+              { "text": "Pesan Terakhir : Penerimaan", "url": "#" }
+            ]'
+          >
+            Tonton Sekarang
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background-image: url('src/img/tari.webp')">
+        <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Tari</h2>
+          <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Gerak tari di Drama Arena menari bersama cerita, menyulam emosi dalam setiap langkahnya."</p>
+          <button
+            onclick="openModal(this)"
+            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+            data-title="Seni Tari"
+            data-items='[
+              { "text": "Grand Opening", "url": "#" },
+              { "text": "Nadham Rencong", "url": "#" },
+              { "text": "Somba-Somba Diraja", "url": "#" },
+              { "text": "Wiroyudho", "url": "#" },
+              { "text": "Manari-Nari Basamo", "url": "#" },
+              { "text": "Tatarucingan", "url": "#" },
+              { "text": "Satrio Kencono", "url": "#" },
+              { "text": "Tong PU Gaya", "url": "#" },
+              { "text": "Nusantara Berpadu Ria", "url": "#" },
+              { "text": "Hunza Balistani", "url": "#" },
+              { "text": "KINJAZ : Kage Suitaru", "url": "#" },
+              { "text": "ASEAN Fusion", "url": "#" },
+              { "text": "Slava Rhythm", "url": "#" },
+              { "text": "ZonZero", "url": "#" }
+            ]'
+          >
+            Tonton Sekarang
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background-image: url('src/img/rupa.webp')">
+        <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Rupa</h2>
+          <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Seni rupa dalam acara Drama Arena menjadi elemen visual yang memperkuat nuansa dan mendukung estetika pertunjukan secara keseluruhan."</p>
+            <button
+            onclick="openModal(this)"
+            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+            data-title="Seni Rupa"
+            data-items='[
+              { "text": "Visual Protokol", "url": "#" },
+              { "text": "Visual Opening", "url": "#" },
+              { "text": "Visual Sapa Mc", "url": "#" },
+              { "text": "Master of Ceremony 1", "url": "#" },
+              { "text": "Tilawah Ayat Suci Al-Quran", "url": "#" },
+              { "text": "Master of Ceremony 2", "url": "#" },
+              { "text": "Sambutan Ketua Drama Arena", "url": "#" },
+              { "text": "Master of Ceremony 3", "url": "#" },
+              { "text": "Sambutan Pimpinan", "url": "#" },
+              { "text": "Cahaya Imaji", "url": "#" },
+              { "text": "Visual : Five Assemble", "url": "#" },
+              { "text": "Visual-Pesan Pertama", "url": "#" },
+              { "text": "Visual Nyatakan Kebenaran", "url": "#" },
+              { "text": "MC Non Formal", "url": "#" },
+              { "text": "Visual : Nusantara Berpadu Ria", "url": "#" },
+              { "text": "Visual : Milliu Membentuk Perilaku", "url": "#" },
+              { "text": "Iklan Aqalin", "url": "#" },
+              { "text": "Visual : Ceritanya Berakhir", "url": "#" }
+            ]'
+          >
+            Tonton Sekarang
+          </button>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+
+
+
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Modal Fullscreen -->
+  <div id="dropdownModal" class="fixed inset-0 bg-black/80 text-white z-50 flex justify-center items-center modal">
+    <div class="bg-white text-black rounded-xl p-10 max-w-2xl w-[90%] mx-auto text-center relative">
+      <button onclick="closeModal()" class="absolute top-3 right-4 text-black text-2xl font-bold hover:text-red-500">&times;</button>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-4">Shop Collection</h2>
+      <div id="modalList" class="space-y-3 text-left overflow-y-auto pr-2" style="max-height: calc(2.5rem * 5 + 0.75rem * 4)">
+        <!-- List content will be injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      speed: 500,
+      effect: 'creative',
+      grabCursor: false,
+      // allowTouchMove: false,
+      // simulateTouch: false,
+      creativeEffect: {
+        prev: { translate: ['-100%', 0, -500], opacity: 0 },
+        next: { translate: ['100%', 0, -500], opacity: 0 }
+      },
+      
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      on: {
+        slideChangeTransitionStart: () => {
+          document.querySelectorAll('.fade-in-up').forEach(el => el.classList.remove('show'));
+          closeModal(); // optional: auto-close modal
+        },
+        slideChangeTransitionEnd: () => {
+          const activeSlide = document.querySelector('.swiper-slide-active');
+          activeSlide.querySelectorAll('.fade-in-up').forEach(el => el.classList.add('show'));
+        }
+      }
+    });
+
+    window.addEventListener('load', () => {
+      document.querySelector('.swiper-slide-active')
+        .querySelectorAll('.fade-in-up')
+        .forEach(el => el.classList.add('show'));
+    });
+
+    function openModal(button) {
+      const title = button.getAttribute('data-title');
+      const items = JSON.parse(button.getAttribute('data-items'));
+
+      document.getElementById('modalTitle').textContent = title;
+
+      const listContainer = document.getElementById('modalList');
+      listContainer.innerHTML = '';
+      items.forEach(item => {
+        const link = document.createElement('a');
+        link.href = item.url || '#';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = item.text;
+        link.className = 'block hover:text-blue-600';
+        listContainer.appendChild(link);
+      });
+
+      document.getElementById('dropdownModal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('dropdownModal').classList.remove('show');
+    }
+
+    document.getElementById('dropdownModal').addEventListener('click', function (e) {
+      if (e.target === this) closeModal();
+    });
+  </script>
+
+</body>
+</html>

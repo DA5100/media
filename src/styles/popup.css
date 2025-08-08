@@ -1,0 +1,76 @@
+/* Overlay */
+.popup {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+
+/* Popup box */
+.popup-content {
+  background-color: #6b7280; /* Default: gray */
+  border-radius: 8px;
+  padding: 24px;
+  width: 320px;
+  color: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.popup-header {
+  margin-bottom: 12px;
+}
+
+#popup-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Message */
+#popup-message {
+  margin-bottom: 16px;
+}
+
+/* Actions */
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* Close button */
+#close-btn {
+  background-color: white;
+  color: #1f2937; /* Dark text */
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#close-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Popup type styles (optional, added dynamically) */
+.popup-content.success {
+  background-color: #10b981; /* Green */
+}
+
+.popup-content.error {
+  background-color: #ef4444; /* Red */
+}
+
+.popup-content.info {
+  background-color: #3b82f6; /* Blue */
+}
