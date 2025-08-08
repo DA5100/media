@@ -293,9 +293,10 @@ scroll.on('scroll', (obj) => {
 
   const scrollY = obj.scroll.y; // posisi scroll sekarang
   const elementTop = stopElement.offsetTop; // posisi dari atas container
+  const viewportBottom = scrollY + window.innerHeight;
 
   // Threshold: berhenti tepat saat atas #swiper ketemu viewport
-  if (scrollY >= elementTop) {
+  if (viewportBottom >= elementTop) {
     stopped = true;
 
     // Scroll paksa ke posisi awal #swiper
