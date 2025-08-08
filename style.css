@@ -226,7 +226,8 @@ body {
     background-position: center; /* Center the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     filter: brightness(0.8);
-    box-shadow: 0px 5px 15px 2px rgba(0,0,0,0.5);
+    /* -webkit-box-shadow: inset 6px -28px 40px 0px rgba(0,0,0,0.77);  */
+    box-shadow: inset 6px -41px 40px 0px rgba(0,0,0,0.79),0px 5px 15px 2px rgba(0,0,0,0.5);
     
     width: 60em;
     height: 40em;
@@ -263,7 +264,6 @@ body {
 }
 
 .gallery .img * {
-    
     color: white;
     margin-left: 0.5em;
 }
@@ -280,6 +280,18 @@ body {
     line-height: 1;
     margin-bottom: 2em;
     width: 80%;
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery .img h2 {
+        font-size: 1.7rem;
+    }
+    
+    .gallery .img p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+  
 }
 
 /* Text Animation */
