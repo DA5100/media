@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async function(){
         const keyRef = db.collection("lisensi").doc(serialKey);
         console.log("Serial Key: " + serialKey);
         console.log("User Token: " + userToken);
-        
+
         let serialKey = await getItem(user.uid, "serial_keys", "serial");
         let userToken = await getItem(user.uid, "jwt", "jwt");
 
@@ -66,54 +66,53 @@ document.addEventListener("DOMContentLoaded", async function(){
                 console.log("Email: " + getData.email + " valid!, jwt: " + userToken);
             }
         });
+
+            async function openIndexedDB() {
+                return new Promise((resolve, reject) => {
+                    const request = indexedDB.open("auth", 1);
+
+                    request.onupgradeneeded = (event) => {
+                        const db = event.target.result;
+                        if (!db.objectStoreNames.contains("serial_keys")) {
+                            db.createObjectStore("serial_keys", { keyPath: "uid" });
+                        }
+                        if (!db.objectStoreNames.contains("jwt")) {
+                            db.createObjectStore("jwt", { keyPath: "uid" });
+                        }
+                    };
+
+                    request.onsuccess = () => resolve(request.result);
+                    request.onerror = () => reject(request.error);
+                });
+            }
+
+            async function setItem(key, value, storeName, valueName = "serial") {
+                const db = await openIndexedDB();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(storeName, "readwrite");
+                    const objectStore = tx.objectStore(storeName);
+                    const req = objectStore.put({ uid: key, [valueName]: value });
+
+                    req.onsuccess = () => resolve(true);
+                    req.onerror = () => reject(req.error);
+                });
+            }
+
+            async function getItem(key, storeName, valueName = "serial") {
+                const db = await openIndexedDB();
+                return new Promise((resolve, reject) => {
+                    const tx = db.transaction(storeName, "readonly");
+                    const objectStore = tx.objectStore(storeName);
+                    const req = objectStore.get(key);
+
+                    req.onsuccess = () => {
+                        const result = req.result?.[valueName] ?? null;
+                        resolve(result);
+                    };
+                    req.onerror = () => reject(req.error);
+                });
+            }
         }
     }
-
-    async function openIndexedDB() {
-    return new Promise((resolve, reject) => {
-        const request = indexedDB.open("auth", 1);
-
-        request.onupgradeneeded = (event) => {
-            const db = event.target.result;
-            if (!db.objectStoreNames.contains("serial_keys")) {
-                db.createObjectStore("serial_keys", { keyPath: "uid" });
-            }
-            if (!db.objectStoreNames.contains("jwt")) {
-                db.createObjectStore("jwt", { keyPath: "uid" });
-            }
-        };
-
-        request.onsuccess = () => resolve(request.result);
-        request.onerror = () => reject(request.error);
-    });
-}
-
-async function setItem(key, value, storeName, valueName = "serial") {
-    const db = await openIndexedDB();
-    return new Promise((resolve, reject) => {
-        const tx = db.transaction(storeName, "readwrite");
-        const objectStore = tx.objectStore(storeName);
-        const req = objectStore.put({ uid: key, [valueName]: value });
-
-        req.onsuccess = () => resolve(true);
-        req.onerror = () => reject(req.error);
-    });
-}
-
-async function getItem(key, storeName, valueName = "serial") {
-    const db = await openIndexedDB();
-    return new Promise((resolve, reject) => {
-        const tx = db.transaction(storeName, "readonly");
-        const objectStore = tx.objectStore(storeName);
-        const req = objectStore.get(key);
-
-        req.onsuccess = () => {
-            const result = req.result ? req.result[valueName] : null;
-            resolve(result);
-        };
-        req.onerror = () => reject(req.error);
-    });
-}
-    
 });
 })
