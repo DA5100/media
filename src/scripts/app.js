@@ -16,15 +16,19 @@ const db = firebase.firestore();
 document.addEventListener("DOMContentLoaded", async function(){
     auth.onAuthStateChanged(async (user) => {
     const currentUser = auth.currentUser;
+    const userUID =  user.uid
+
     function isValidFormat(str) {
         const regex = /^[A-Za-z0-9]{5}[A-Za-z0-9]{5}$/;
         return regex.test(str);
     }
 
-    let serialKey = await getItem(await currentUser.uid, "serial_keys", "serial");
-    let userToken = await getItem(await currentUser.uid, "jwt", "jwt");
+    let serialKey = await getItem(user.uid, "serial_keys", "serial");
+    let userToken = await getItem(user.uid, "jwt", "jwt");
+    console.log("Serial Key: " + serialKey);
+    console.log("User Token: " + userToken);
 
-    if (!currentUser) {
+    if (!user) {
         openPopup("Error", "Anda belum login. Silakan login terlebih dahulu untuk melanjutkan.", "error", "https://da5100.github.io/auth/");
         // window.location.href = "https://da5100.github.io/auth/";
         return;
