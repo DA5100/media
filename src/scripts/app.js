@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async function(){
 
     let serialKey = await getItem(user.uid, "serial_keys", "serial");
     let userToken = await getItem(user.uid, "jwt", "jwt");
+
     console.log("Serial Key: " + serialKey);
     console.log("User Token: " + userToken);
 
@@ -32,38 +33,43 @@ document.addEventListener("DOMContentLoaded", async function(){
         openPopup("Error", "Anda belum login. Silakan login terlebih dahulu untuk melanjutkan.", "error", "https://da5100.github.io/auth/");
         // window.location.href = "https://da5100.github.io/auth/";
         return;
-    } else if (!isValidFormat(serialKey)){
-        openPopup("Error", "Serial Key tidak sesuai format", "error", "https://da5100.github.io/auth/");
     } else {
         console.log("User is logged in:", user.displayName); 
-    
-        const email = String(user.email);
-        const emailmd5 = CryptoJS.MD5(email).toString();
 
        if (!serialKey) {
             openPopup("Error", "Serial key tidak ditemukan. Silakan masukkan serial key yang valid.", "error", "https://da5100.github.io/auth/");
             return;
+
         } else {
+
         const keyRef = db.collection("lisensi").doc(serialKey);
         console.log("Serial Key: " + serialKey);
         console.log("User Token: " + userToken);
+        
+        let serialKey = await getItem(user.uid, "serial_keys", "serial");
+        let userToken = await getItem(user.uid, "jwt", "jwt");
+
+        console.log("Serial Key: " + serialKey);
+        console.log("User Token: " + userToken);
+
         keyRef.get().then(async (doc) => {
             let getData = doc.data();
             const emailDatamd5 = CryptoJS.MD5(getData.email).toString();
 
-        if(!userToken || !doc.exists) {
-            openPopup("Error", "User Token tidak ada!", "error", "https://da5100.github.io/auth/");
-            window.location.href = "https://da5100.github.io/auth/"
-        } else if (!serialKey) {
-            openPopup("Error", "Serial key tidak ditemukan. Silakan masukkan serial key yang valid.", "error", "https://da5100.github.io/auth/");
-            window.location.href = "https://da5100.github.io/auth/"
-        } else {
-            console.log("Email: " + getData.email + " valid!, jwt: " + userToken);
-        }
-    });
+            if(!userToken || !doc.exists) {
+                openPopup("Error", "User Token tidak ada!", "error", "https://da5100.github.io/auth/");
+                window.location.href = "https://da5100.github.io/auth/"
+            } else if (!serialKey) {
+                openPopup("Error", "Serial key tidak ditemukan. Silakan masukkan serial key yang valid.", "error", "https://da5100.github.io/auth/");
+                window.location.href = "https://da5100.github.io/auth/"
+            } else {
+                console.log("Email: " + getData.email + " valid!, jwt: " + userToken);
+            }
+        });
         }
     }
-     async function openIndexedDB() {
+
+    async function openIndexedDB() {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open("auth", 1);
 
