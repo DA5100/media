@@ -195,8 +195,8 @@
     // Tombol Discover
     const discoverButton = document.querySelector('.discover');
     discoverButton.addEventListener('click', () => {
-      const song = new Audio('audio.mp4');
-      song.play()
+      const song = new Audio('audio.mp3');
+      song.play('audio.mp3')
       const swiper = document.querySelector('.swiper');
       if (swiper) {
         scroll.scrollTo(swiper, { duration: 18000, easing: [.66, .4, 1, .93], });
