@@ -1,13 +1,14 @@
 /* Setup Color */
 :root {
-    --brown-dark: rgb(59, 21, 11);
-    --brown:#fcf7ea;
-    --font-main: 'Andine', serif;
+  --brown-dark: rgb(59, 21, 11);
+  --brown: #fcf7ea;
+  --font-main: 'Andine', serif;
 }
 
 html {
-    /* scroll-behavior: smooth; */
-    font-size: 16px; /* Atur ukuran font dasar */
+  /* scroll-behavior: smooth; */
+  font-size: 16px;
+  /* Atur ukuran font dasar */
 }
 
 /* html, body {
@@ -24,8 +25,8 @@ html {
 @font-face {
   font-family: 'Andine';
   src: url('src/fonts/Andine.woff2') format('woff2'),
-       url('src/fonts/Andine.woff') format('woff'),
-       url('src/fonts/Andine.ttf') format('truetype');
+    url('src/fonts/Andine.woff') format('woff'),
+    url('src/fonts/Andine.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,24 +40,24 @@ body {
 }
 
 * {
-    transition: background-color 0.5s ease, color 0.5s ease;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    color: var(--brown-dark);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: var(--brown-dark);
 }
 
 /* Loader */
 /* HTML: <div class="loader"></div> */
 
 .page-loader {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--brown);
-    z-index: 10000;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brown);
+  z-index: 10000;
 }
 
 /* HTML: <div class="loader"></div> */
@@ -64,26 +65,30 @@ body {
   width: fit-content;
   font-size: 40px;
   line-height: 1.5;
-  font-family: system-ui,sans-serif;
+  font-family: system-ui, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #0000;
   -webkit-text-stroke: 1px var(--brown-dark);
   background:
-    radial-gradient(1.13em at 50% 1.6em,var(--brown-dark) 99%,#0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
-    radial-gradient(1.13em at 50% -0.8em,#0000 99%,var(--brown-dark) 101%) 50% .8em/3.2em 100% repeat-x  text;
+    radial-gradient(1.13em at 50% 1.6em, var(--brown-dark) 99%, #0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+    radial-gradient(1.13em at 50% -0.8em, #0000 99%, var(--brown-dark) 101%) 50% .8em/3.2em 100% repeat-x text;
   animation: l9 2s linear infinite;
 }
+
 .loader:before {
   content: "Drama Arena";
 }
+
 @keyframes l9 {
-  to {background-position: calc(50% + 1.6em) 0,calc(50% + 3.2em) .8em}
+  to {
+    background-position: calc(50% + 1.6em) 0, calc(50% + 3.2em) .8em
+  }
 }
 
 /* Navbar */
 .navmenu {
-  
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -103,7 +108,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left:20em;
+  margin-left: 20em;
 }
 
 .navmenu .logo-container img {
@@ -139,175 +144,206 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .navmenu .menu {
-        display: none;
-    }
+  .navmenu .menu {
+    display: none;
+  }
 
-    .navmenu {
-      height: 8vh;
-    }
+  .navmenu {
+    height: 8vh;
+  }
 
-    .navmenu .logo-container {
-        margin-left: 1rem;
-    }
+  .navmenu .logo-container {
+    margin-left: 1rem;
+  }
 }
 
 
 /* Hero */
 
 .hero {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    background-color: black;
-    z-index: 1001;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: black;
+  z-index: 1001;
 }
 
 .hero img {
-    max-height: 250px; /* Atur sesuai kebutuhan */
-    height: auto;
-    width: auto;
-    filter: invert(1);
+  max-height: 250px;
+  /* Atur sesuai kebutuhan */
+  height: auto;
+  width: auto;
+  filter: invert(1);
 }
 
 @media (max-width: 425px) {
-    .hero img {
-        max-height: 150px; /* Atur untuk layar kecil */
-    }
+  .hero img {
+    max-height: 150px;
+    /* Atur untuk layar kecil */
+  }
 }
 
 .hero a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    background-color: transparent;
-    border: 0.1rem solid white;
-    border-radius: 4rem;
-    transition: all 0.3s ease;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 0.1rem solid white;
+  border-radius: 4rem;
+  transition: all 0.3s ease;
 }
 
 .hero a:hover {
-    background-color: white;
-    color: black;
-    font-size: 1.2rem;
-    padding: 1.5rem 2.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;
+  padding: 1.5rem 2.5rem;
 }
 
 /* Gallery */
 
 .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    width: 100%;
-    /* background-color: #f0f0f0; */
-    gap: 1rem;
-    background-color: var(--brown); 
-    padding-bottom: 10vh;  
-    scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: #f0f0f0; */
+  gap: 1rem;
+  background-color: var(--brown);
+  padding-bottom: 10vh;
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 425px) {
-    .gallery {
-        gap: 0.5rem;
-    }
+  .gallery {
+    gap: 0.5rem;
+  }
 }
 
 .gallery .img {
-    background-image: url('https://da5100.github.io/assets/img/portfolio/books-1.webp');
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    filter: brightness(0.8);
-    /* -webkit-box-shadow: inset 6px -28px 40px 0px rgba(0,0,0,0.77);  */
-    box-shadow: inset 6px -41px 40px 0px rgba(0,0,0,0.79),0px 5px 15px 2px rgba(0,0,0,0.5);
-    
-    width: 60em;
-    height: 40em;
-    aspect-ratio: 3 / 2;      /* Maintain 2:1 ratio = ~600x300 */
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 0.5em;
-    /* overflow: hidden; */
-    
-    /* transition: all 0.1s ease; */
+  background-image: url('https://da5100.github.io/assets/img/portfolio/books-1.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Center the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  filter: brightness(0.8);
+  /* -webkit-box-shadow: inset 6px -28px 40px 0px rgba(0,0,0,0.77);  */
+  box-shadow: inset 6px -41px 40px 0px rgba(0, 0, 0, 0.79), 0px 5px 15px 2px rgba(0, 0, 0, 0.5);
+
+  width: 60em;
+  height: 40em;
+  aspect-ratio: 3 / 2;
+  /* Maintain 2:1 ratio = ~600x300 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 0.5em;
+  /* overflow: hidden; */
+
+  will-change: transform, opacity;
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  /* transition: all 0.1s ease; */
 }
 
-.gallery .img:nth-child(1) {background-image: url('src/img/act1.webp');}
-.gallery .img:nth-child(2) {background-image: url('src/img/act2.webp');}
-.gallery .img:nth-child(3) {background-image: url('src/img/act3.webp');}
-.gallery .img:nth-child(4) {background-image: url('src/img/act4.webp');}
-.gallery .img:nth-child(5) {background-image: url('src/img/img1.webp');}
-.gallery .img:nth-child(6) {background-image: url('src/img/img2.webp');}
-.gallery .img:nth-child(7) {background-image: url('src/img/img3.webp');}
-.gallery .img:nth-child(8) {background-image: url('src/img/img4.webp');}
+.gallery .img:nth-child(1) {
+  background-image: url('src/img/act1.webp');
+}
+
+.gallery .img:nth-child(2) {
+  background-image: url('src/img/act2.webp');
+}
+
+.gallery .img:nth-child(3) {
+  background-image: url('src/img/act3.webp');
+}
+
+.gallery .img:nth-child(4) {
+  background-image: url('src/img/act4.webp');
+}
+
+.gallery .img:nth-child(5) {
+  background-image: url('src/img/img1.webp');
+}
+
+.gallery .img:nth-child(6) {
+  background-image: url('src/img/img2.webp');
+}
+
+.gallery .img:nth-child(7) {
+  background-image: url('src/img/img3.webp');
+}
+
+.gallery .img:nth-child(8) {
+  background-image: url('src/img/img4.webp');
+}
 
 @media screen and (max-width: 1024px) {
-    .gallery .img {
-        width: 30em;
-        height: 20em;
-    }
+  .gallery .img {
+    width: 30em;
+    height: 20em;
+  }
 }
 
 .gallery .img:hover {
-    /* transform: scale(1.05); */
-    filter: brightness(1);
+  /* transform: scale(1.05); */
+  filter: brightness(1);
 }
 
 .gallery .img * {
-    color: white;
-    margin-left: 0.5em;
+  color: white;
+  margin-left: 0.5em;
 }
 
 .gallery .img h2 {
-    font-size: 1.2rem;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-    line-height: 2;
+  font-size: 1.2rem;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  line-height: 2;
 }
 
 .gallery .img p {
-    font-size: 0.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1;
-    margin-bottom: 2em;
-    width: 80%;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  margin-bottom: 2em;
+  width: 80%;
 }
 
 @media screen and (min-width: 1024px) {
-    .gallery .img h2 {
-        font-size: 1.7rem;
-    }
-    
-    .gallery .img p {
-        font-size: 1.2rem;
-        width: 90%;
-    }
-  
+  .gallery .img h2 {
+    font-size: 1.7rem;
+  }
+
+  .gallery .img p {
+    font-size: 1.2rem;
+    width: 90%;
+  }
+
 }
 
 /* Text Animation */
 
 .text-animation {
-    background-color: var(--brown);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--brown);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-animation span {
-    font-size: 5em;
-    height: 2em;
-    white-space: nowrap;
+  font-size: 5em;
+  height: 2em;
+  white-space: nowrap;
 }
 
 /* Swiper */
@@ -325,7 +361,7 @@ body {
 } */
 
 .swiper-embed {
-    cursor: pointer;
+  cursor: pointer;
   width: 100%;
   height: 100%;
   border: none;
@@ -367,26 +403,27 @@ body {
   .navbar ul {
     list-style-type: none;
     display: hide
-  } 
-  
+  }
+
   .navbar li {
     transition: 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--brown-dark);
-    opacity: 75%;    
+    opacity: 75%;
   }
-  
+
   .navbar li:hover {
     transform: translateY(-10px);
   }
 }
 
- @media (min-width: 1024px) {
+@media (min-width: 1024px) {
   .extender {
     display: none;
-  }}
+  }
+}
 
 /* Go Up Button */
 .go-up {

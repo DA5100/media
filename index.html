@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="description" content="Drama Arena 5100 Documentation - Explore the features and functionalities of the Drama Arena 5100 platform.">
-    <meta name="keywords" content="Drama Arena, 5100, documentation, features, functionalities, platform, da5100, qrda, drama arena 5100, da5100 documentation">
-    <meta name="author" content="#eclipseteam">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drama Arena 5100 Documentation</title>
+  <meta name="description"
+    content="Drama Arena 5100 Documentation - Explore the features and functionalities of the Drama Arena 5100 platform.">
+  <meta name="keywords"
+    content="Drama Arena, 5100, documentation, features, functionalities, platform, da5100, qrda, drama arena 5100, da5100 documentation">
+  <meta name="author" content="#eclipseteam">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drama Arena 5100 Documentation</title>
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
 
-    <!-- Cloudflare -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js" integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/md5.min.js" integrity="sha512-ENWhXy+lET8kWcArT6ijA6HpVEALRmvzYBayGL6oFWl96exmq8Fjgxe2K6TAblHLP75Sa/a1YjHpIZRt+9hGOQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Cloudflare -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+    integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/md5.min.js"
+    integrity="sha512-ENWhXy+lET8kWcArT6ijA6HpVEALRmvzYBayGL6oFWl96exmq8Fjgxe2K6TAblHLP75Sa/a1YjHpIZRt+9hGOQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Locomotive Scroll -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <!-- Locomotive Scroll -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 
-    <!-- ANTI HACK -->
-    <!-- <script src="https://raw.githubusercontent.com/sanrandry/anti-inspect-element/refs/heads/master/anti-inspect-element.js"></script>
+  <!-- ANTI HACK -->
+  <script src="https://raw.githubusercontent.com/sanrandry/anti-inspect-element/refs/heads/master/anti-inspect-element.js"></script>
     <script src="src/scripts/popup.js"></script>
     <script src="src/scripts/app.js"></script>
-    <script src="src/scripts/blockDevTools.js"></script> -->
+    <script src="src/scripts/blockDevTools.js"></script>
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="src/styles/main.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Icon -->
-    <link rel="icon" href="https://da5100.github.io/assets/img/favicon.webp" type="image/png">
-    <!-- <link rel="apple-touch-icon" href="src/img/logo.png"> -->
+  <!-- Icon -->
+  <link rel="icon" href="https://da5100.github.io/assets/img/favicon.webp" type="image/png">
+  <!-- <link rel="apple-touch-icon" href="src/img/logo.png"> -->
 
-    <!-- Feather Icon Files -->
+  <!-- Feather Icon Files -->
   <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
+
 <body>
+
+  <!-- Preload Handler -->
   <script>
-     window.onload = function() {
-        var loaders = document.getElementsByClassName('page-loader');
-        for (var i = 0; i < loaders.length; i++) {
-          loaders[i].style.display = 'none';
-        }
-     };
+    window.onload = function () {
+      var loaders = document.getElementsByClassName('page-loader');
+      for (var i = 0; i < loaders.length; i++) {
+        loaders[i].style.display = 'none';
+      }
+    };
   </script>
-  <!-- <noscript>
+
+  <!-- Anti Javascrip Blocker -->
+  <noscript>
     <div style="color: red; font-weight: bold;">
     JavaScript is disabled in your browser. Please enable it to use this site.
     </div>
-  </noscript> -->
+  </noscript>
+
   <div class="page-loader">
     <div class="loader"></div>
   </div>
@@ -65,256 +78,268 @@
   <div class="go-up">
     <i data-feather="chevrons-up"></i>
   </div>
-  
+
   <div class="navmenu">
-      <div class="logo-container">
-        <img src="https://da5100.github.io/assets/img/favicon.webp" alt="Logo DA" class="logo">
-        <h1 class="sitename">Drama Arena</h1>
-        <span>5100</span>
-      </div>
-      <div class="menu">
-        <a href="https://da5100.github.io?page=beranda">Beranda</a>
-        <a href="https://da5100.github.io?page=tentang">Tentang</a>
-        <a href="https://da5100.github.io?page=galeri">Galeri</a>
-        <a href="https://da5100.github.io/media">Media</a>
-        <a href="https://da5100.github.io?page=harapan">Masukan</a>
-      </div>
+    <div class="logo-container">
+      <img src="https://da5100.github.io/assets/img/favicon.webp" alt="Logo DA" class="logo">
+      <h1 class="sitename">Drama Arena</h1>
+      <span>5100</span>
+    </div>
+    <div class="menu">
+      <a href="https://da5100.github.io?page=beranda">Beranda</a>
+      <a href="https://da5100.github.io?page=tentang">Tentang</a>
+      <a href="https://da5100.github.io?page=galeri">Galeri</a>
+      <a href="https://da5100.github.io/media">Media</a>
+      <a href="https://da5100.github.io?page=harapan">Masukan</a>
+    </div>
   </div>
 
-    <div data-scroll-container>
-        <div class="hero" data-scroll-section>  
-        <img src="src/img/logo.png" alt="Logo DA" data-scroll data-scroll-speed="1">
-        <a class="discover" data-scroll data-scroll-speed="2" data-scroll-position="top">
-          Discover
-        </a>
-      </div>
-  
-      <div class="gallery" data-scroll-section>
-        <div class="img">
-          <h2>Drama Act 1 : Pesan Penyangkalan</h2>
-          <p>Kisah dimulai ketika Dharma mengumpulkan para anggota dan mudabbir dalam sebuah perkumpulan. Usai pertemuan, Dharma dan Nawwas berkeliling rayon untuk meninjau kondisi lingkungan. Mereka menemukan berbagai kejanggalan dan permasalahan.</p>
-        </div>
-        <div class="reverse img">
-          <h2>Drama Act 2 : Pesan Amarah</h2>
-          <p>Pertikaian berlanjut hingga di kelas. Nawwas menegur Dharma yang ketahuan tidur, namun Dharma membela diri dengan alasan kelelahan karena banyak berkorban untuk rayon. Ketegangan memuncak saat pelajaran IPA dimulai dan Dharma mengaitkan kedisiplinan dengan kesehatan, yang justru memperkuat keyakinannya.</p>
-        </div>
-        <div class="img">
-          <h2>Drama Act 3 : Pesan Negoisasi</h2>
-          <p>Dharma yang menegakkan disiplin secara ketat justru membuat anggota dan mudabbirnya tidak betah dan enggan patuh. Sementara Nawwas yang memimpin dengan kasih sayang malah diremehkan, hingga rayonnya dipenuhi masalah dan mendapat teguran dari OPPM.</p>
-        </div>
-        <div class="reverse img">
-          <h2>Drama Act 4 : Pesan Peringatan</h2>
-          <p>Dharma memperlihatkan para anggota dan mudabbir menyesali sikap mereka, menyadari bahwa pemimpin yang cakap telah mereka abaikan. Cerita kembali ke realitas—Dharma selesai menulis naskahnya, sementara Nawwas kecewa karena merasa ditinggalkan.</p>
-        </div>
-        <div class="img">
-          <h2>Tong Pu Gaya</h2>
-          <p>Tarian ini adalah tarian dari daerah bagian timur Indonesia, tarian ini memiliki gerakan yang sengat energik, yang dapat membuat orang ikut bergoyang dan menikmatinya.</p>
-        </div>
-        <div class="reverse img">
-          <h2>Drama Kabaret</h2>
-          <p>Ini adalah acara Drama Komedi yang dilengkapi dengan berbagai adegan lucu yang mengocok perut, drama ini menceritakan tentang Al-Akh Makmur yang mencoba untuk menjadi mudabbir yang baik dengan dibantu oleh teman-temannya.</p>
-        </div>
-        <div class="img">
-          <h2>Hadroh 5100</h2>
-          <p>Sebuah seni musik Islami yang menyajikan lagu-lagu sholawat untuk Nabi Muhammad SAW, dikembangkan dengan perpaduan alat musik seperti ketipung, tam, bass, darbuka, dan kecrik. Penampilan ini dipersembahkan di awal acara dengan harapan dapat menambah keberkahan dalam acara Drama Arena kali ini.</p>
-        </div>
-        <div class="reverse img">
-          <h2>Nari Manari Basamo</h2>
-          <p>Tarian ini menampilkan kekayaan budaya Minangkabau melalui perpaduan silat, Tari Randai yang teatrikal, dan Tari Ciek Duo Tigo yang harmonis. Ketiganya mencerminkan nilai seni, ketangkasan, dan kebersamaan dalam budaya Minang.</p>
-        </div>
-      </div>
-  
-      <div class="text-animation" data-scroll-section>
-       <span>Drama Arena</span>
-       <span>Eksis Menjaga Identitas Dinamis Menuju Kualitas</span>
-       <span>Five Art Collaboration</span>
-       <span>Five A Hundred</span>
-       <span>5100</span>
-      </div>
-
-      <div class="swiper .iframe-parent" id="swiper" data-scroll-section>
-          <iframe class="swiper-embed" src="slider.html" data-scroll data-scroll-speed="0"></iframe>
-        </div>
-
-      <div style="height:200vh;" class="extender"></div>
-  
+  <div data-scroll-container>
+    <div class="hero" data-scroll-section>
+      <img src="src/img/logo.png" alt="Logo DA" data-scroll data-scroll-speed="1">
+      <a class="discover" data-scroll data-scroll-speed="2" data-scroll-position="top">
+        Discover
+      </a>
     </div>
 
+    <div class="gallery" data-scroll-section>
+      <div class="img">
+        <h2>Drama Act 1 : Pesan Penyangkalan</h2>
+        <p>Kisah dimulai ketika Dharma mengumpulkan para anggota dan mudabbir dalam sebuah perkumpulan. Usai pertemuan,
+          Dharma dan Nawwas berkeliling rayon untuk meninjau kondisi lingkungan. Mereka menemukan berbagai kejanggalan
+          dan permasalahan.</p>
+      </div>
+      <div class="reverse img">
+        <h2>Drama Act 2 : Pesan Amarah</h2>
+        <p>Pertikaian berlanjut hingga di kelas. Nawwas menegur Dharma yang ketahuan tidur, namun Dharma membela diri
+          dengan alasan kelelahan karena banyak berkorban untuk rayon. Ketegangan memuncak saat pelajaran IPA dimulai
+          dan Dharma mengaitkan kedisiplinan dengan kesehatan, yang justru memperkuat keyakinannya.</p>
+      </div>
+      <div class="img">
+        <h2>Drama Act 3 : Pesan Negoisasi</h2>
+        <p>Dharma yang menegakkan disiplin secara ketat justru membuat anggota dan mudabbirnya tidak betah dan enggan
+          patuh. Sementara Nawwas yang memimpin dengan kasih sayang malah diremehkan, hingga rayonnya dipenuhi masalah
+          dan mendapat teguran dari OPPM.</p>
+      </div>
+      <div class="reverse img">
+        <h2>Drama Act 4 : Pesan Peringatan</h2>
+        <p>Dharma memperlihatkan para anggota dan mudabbir menyesali sikap mereka, menyadari bahwa pemimpin yang cakap
+          telah mereka abaikan. Cerita kembali ke realitas—Dharma selesai menulis naskahnya, sementara Nawwas kecewa
+          karena merasa ditinggalkan.</p>
+      </div>
+      <div class="img">
+        <h2>Tong Pu Gaya</h2>
+        <p>Tarian ini adalah tarian dari daerah bagian timur Indonesia, tarian ini memiliki gerakan yang sengat energik,
+          yang dapat membuat orang ikut bergoyang dan menikmatinya.</p>
+      </div>
+      <div class="reverse img">
+        <h2>Drama Kabaret</h2>
+        <p>Ini adalah acara Drama Komedi yang dilengkapi dengan berbagai adegan lucu yang mengocok perut, drama ini
+          menceritakan tentang Al-Akh Makmur yang mencoba untuk menjadi mudabbir yang baik dengan dibantu oleh
+          teman-temannya.</p>
+      </div>
+      <div class="img">
+        <h2>Hadroh 5100</h2>
+        <p>Sebuah seni musik Islami yang menyajikan lagu-lagu sholawat untuk Nabi Muhammad SAW, dikembangkan dengan
+          perpaduan alat musik seperti ketipung, tam, bass, darbuka, dan kecrik. Penampilan ini dipersembahkan di awal
+          acara dengan harapan dapat menambah keberkahan dalam acara Drama Arena kali ini.</p>
+      </div>
+      <div class="reverse img">
+        <h2>Nari Manari Basamo</h2>
+        <p>Tarian ini menampilkan kekayaan budaya Minangkabau melalui perpaduan silat, Tari Randai yang teatrikal, dan
+          Tari Ciek Duo Tigo yang harmonis. Ketiganya mencerminkan nilai seni, ketangkasan, dan kebersamaan dalam budaya
+          Minang.</p>
+      </div>
+    </div>
 
-    <ul class="navbar" data-scroll-section>
-      <li data-page="beranda" class="navItem .nav-beranda"><i data-feather="home"></i></i><a href="https://da5100.github.io?page=beranda">Beranda</a></li>
-      <li data-page="tentang" class="navItem .nav-tentang"><i data-feather="info"></i><a href="https://da5100.github.io?page=tentang">Tentang</a></li>
-      <li data-page="galeri" class="navItem .nav-galeri"><i data-feather="image"></i><a href="https://da5100.github.io?page=galeri">Galeri</a></li>
-      <li><i data-feather="camera"></i><a href="https://da5100.github.io/qrda/">Media</a></li>
-      <li data-page="harapan" class="navItem .nav-harapan"><i data-feather="message-square"></i><a href="https://da5100.github.io?page=harapan">Masukan</a></li>
-    </ul>
-     <!-- <div id="smooth-scroll"></div> -->
+    <div class="text-animation" data-scroll-section>
+      <span>Drama Arena</span>
+      <span>Eksis Menjaga Identitas Dinamis Menuju Kualitas</span>
+      <span>Five Art Collaboration</span>
+      <span>Five A Hundred</span>
+      <span>5100</span>
+    </div>
+
+    <div class="swiper .iframe-parent" id="swiper" data-scroll-section>
+      <iframe class="swiper-embed" src="slider.html" data-scroll data-scroll-speed="0"></iframe>
+    </div>
+
+    <div style="height:200vh;" class="extender"></div>
+
+  </div>
 
 
-    <script src="src/scripts/main.js"></script>
-    <!-- <script>
-  const scrollContainer = document.getElementById('smooth-scroll');
-  let currentScroll = 0;
-  let targetScroll = 0;
-  const ease = 0.07; // Semakin kecil = semakin lambat dan smooth
+  <ul class="navbar" data-scroll-section>
+    <li data-page="beranda" class="navItem .nav-beranda"><i data-feather="home"></i></i><a
+        href="https://da5100.github.io?page=beranda">Beranda</a></li>
+    <li data-page="tentang" class="navItem .nav-tentang"><i data-feather="info"></i><a
+        href="https://da5100.github.io?page=tentang">Tentang</a></li>
+    <li data-page="galeri" class="navItem .nav-galeri"><i data-feather="image"></i><a
+        href="https://da5100.github.io?page=galeri">Galeri</a></li>
+    <li><i data-feather="camera"></i><a href="https://da5100.github.io/qrda/">Media</a></li>
+    <li data-page="harapan" class="navItem .nav-harapan"><i data-feather="message-square"></i><a
+        href="https://da5100.github.io?page=harapan">Masukan</a></li>
+  </ul>
 
-  function smoothScroll() {
-    targetScroll = window.scrollY || window.pageYOffset;
-    currentScroll += (targetScroll - currentScroll) * ease;
-    scrollContainer.style.transform = `translateY(${-currentScroll}px)`;
-    requestAnimationFrame(smoothScroll);
-  }
+  <!-- <script src="src/scripts/main.js"></script> -->
 
-  // Set height body sesuai tinggi konten scrollContainer
-  function setBodyHeight() {
-    document.body.style.height = `${scrollContainer.getBoundingClientRect().height}px`;
-  }
-
-  window.addEventListener('resize', () => {
-    rotateImagesOnScroll();});
-  window.addEventListener('load', () => {
-    rotateImagesOnScroll()
-    smoothScroll();
-  });
-</script> --> 
-    
-    <script>
-       const goUp = document.getElementsByClassName('go-up')[0];
+  <!-- Button Handler -->
+  <script>
+    // Tombol goUp
+    const goUp = document.getElementsByClassName('go-up')[0];
 
     goUp.addEventListener('click', () => {
-      scroll.scrollTo(0); // Scroll to the top (position 0)
+      scroll.scrollTo(0);
     });
 
+    // Tombol Discover
     const discoverButton = document.querySelector('.discover');
     discoverButton.addEventListener('click', () => {
-    const swiper = document.querySelector('.swiper'); // Replace with your actual last element's class or ID
-    if (swiper) {
-      scroll.scrollTo(swiper, {duration: 18000, easing: [.66,.4,1,.93],});
-    }});
-    </script>
-    <script>
-        function rotateImagesOnScroll() {
-  const gallery = document.querySelector('.gallery');
-  const images = gallery ? gallery.querySelectorAll('.img') : [];
-  const viewportHeight = window.innerHeight;
-  const centerThreshold = 10;
+      const song = new Audio('audio.mp4');
+      song.play()
+      const swiper = document.querySelector('.swiper');
+      if (swiper) {
+        scroll.scrollTo(swiper, { duration: 18000, easing: [.66, .4, 1, .93], });
+      }
+    });
+  </script>
 
-  images.forEach((img, index) => {
-    const rect = img.getBoundingClientRect();
-    const imgCenter = rect.top + rect.height / 2;
-    const screenCenter = viewportHeight / 2;
-    const distanceFromCenter = imgCenter - screenCenter;
+  <!-- Image Animation -->
+  <script>
+    function rotateImagesOnScroll() {
+      const gallery = document.querySelector('.gallery');
+      const images = gallery ? gallery.querySelectorAll('.img') : [];
+      const viewportHeight = window.innerHeight;
+      const centerThreshold = 10;
 
-    // --- TranslateX slow when near center ---
-    const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
-    const slowZone = 2.5; // Semakin kecil, semakin tertahan di tengah
-    const easedOffset = Math.pow(offsetRatio, slowZone);
-    let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
-    translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
+      images.forEach((img, index) => {
+        const rect = img.getBoundingClientRect();
+        const imgCenter = rect.top + rect.height / 2;
+        const screenCenter = viewportHeight / 2;
+        const distanceFromCenter = imgCenter - screenCenter;
 
-    // --- Scale ---
-    const scaleValue = (Math.abs(distanceFromCenter) < centerThreshold) ? 1.2 : 1;
+        const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
+        const slowZone = 2.5;
+        const easedOffset = Math.pow(offsetRatio, slowZone);
+        let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
+        translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
 
-    // --- Rotation ---
-    let rotateValue = (index % 2 === 0)
-      ? 2 + (20 * distanceFromCenter / viewportHeight)
-      : -2 - (20 * distanceFromCenter / viewportHeight);
+        const scaleValue = (Math.abs(distanceFromCenter) < centerThreshold) ? 1.2 : 1;
 
-    // --- Apply style ---
-    img.style.transform = `translateX(${translateXValue}px)rotate(${rotateValue}deg)`;
-    img.style.filter = `brightness(${1 - Math.abs(distanceFromCenter) / viewportHeight})`;
-    img.style.transition = 'transform 0.3s ease, filter 0.3s ease';
+        let rotateValue = (index % 2 === 0)
+          ? 2 + (20 * distanceFromCenter / viewportHeight)
+          : -2 - (20 * distanceFromCenter / viewportHeight);
 
-    // --- Text Animation ---
-  const textAnimation = document.querySelector('.text-animation');
-  const textSpans = textAnimation ? textAnimation.querySelectorAll('span') : [];
+        img.style.transform = `translateX(${translateXValue}px)rotate(${rotateValue}deg)`;
+        img.style.filter = `brightness(${1 - Math.abs(distanceFromCenter) / viewportHeight})`;
 
-  textSpans.forEach((span, index) => {
-    const rect = span.getBoundingClientRect();
-    const spanCenter = rect.top + rect.height / 2;
-    const screenCenter = viewportHeight / 2;
-    const distanceFromCenter = spanCenter - screenCenter;
+        const textAnimation = document.querySelector('.text-animation');
+        const textSpans = textAnimation ? textAnimation.querySelectorAll('span') : [];
 
-    const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
-    const slowZone = 2.5;
-    const easedOffset = Math.pow(offsetRatio, slowZone);
-    let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
-    translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
+        textSpans.forEach((span, index) => {
+          const rect = span.getBoundingClientRect();
+          const spanCenter = rect.top + rect.height / 2;
+          const screenCenter = viewportHeight / 2;
+          const distanceFromCenter = spanCenter - screenCenter;
 
-    span.style.transform = `translateX(${translateXValue}px)`;
-    // span.style.filter = `brightness(${1 - Math.abs(distanceFromCenter) / viewportHeight})`;
-    span.style.transition = 'transform 0.3s ease';
-  });
-  });
-}
+          const offsetRatio = Math.abs(distanceFromCenter) / screenCenter;
+          const slowZone = 2.5;
+          const easedOffset = Math.pow(offsetRatio, slowZone);
+          let translateXValue = (index % 2 === 0) ? easedOffset * 700 : -easedOffset * 700;
+          translateXValue = Math.max(-1200, Math.min(1200, translateXValue));
 
-        document.addEventListener('DOMContentLoaded', rotateImagesOnScroll);
-        document.addEventListener('resize', rotateImagesOnScroll);
-        document.addEventListener('load', rotateImagesOnScroll);
-        
-    </script>
-    <script>
-      const scroll = new LocomotiveScroll({
-          el: document.querySelector("[data-scroll-container]"),
-          smooth: true,
-          smoothMobile: true,        // aktifkan smooth di mobile
-          touchMultiplier: 2,        // meningkatkan respons gerakan sentuhan
-          lerp: 0.03,
-          multiplier: 0.5,
-          smartphone: {
-            smooth: true,
-            multiplier: 0.8,
-            breakpoint: 0            // aktifkan untuk semua ukuran smartphone
-          },
-          tablet: {
-            smooth: true,
-            // multiplier: 1,
-            breakpoint: 0            // aktifkan untuk tablet juga
-          },
-          reloadOnContextChange: true
+          span.style.transform = `translateX(${translateXValue}px)`;
+          span.style.transition = 'transform 0.3s ease';
+        });
       });
+    }
 
-      scroll.on('scroll', () => {
-        rotateImagesOnScroll();
-      });
+    document.addEventListener('DOMContentLoaded', rotateImagesOnScroll);
+    document.addEventListener('resize', rotateImagesOnScroll);
+    document.addEventListener('load', rotateImagesOnScroll);
 
-      window.addEventListener('load', () => {
-        rotateImagesOnScroll();
-        scroll.update();
-      });
-    </script>
-    <script>
-      // Elemen target
-const stopElement = document.querySelector('#swiper');
-let stopped = false;
+  </script>
 
-scroll.on('scroll', (obj) => {
-  if (stopped) return;
+  <!-- Init LocomotiveScroll -->
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      smoothMobile: true,        // aktifkan smooth di mobile
+      touchMultiplier: 2,        // meningkatkan respons gerakan sentuhan
+      lerp: 0.03,
+      multiplier: 0.5,
+      smartphone: {
+        smooth: true,
+        multiplier: 0.8,
+        breakpoint: 0            // aktifkan untuk semua ukuran smartphone
+      },
+      tablet: {
+        smooth: true,
+        multiplier: 1,
+        breakpoint: 0            // aktifkan untuk tablet juga
+      },
+      reloadOnContextChange: true
+    });
 
-  const scrollY = obj.scroll.y; // posisi scroll sekarang
-  const elementTop = stopElement.offsetTop; // posisi dari atas container
-  const viewportBottom = scrollY + window.innerHeight;
+    scroll.on('scroll', () => {
+      rotateImagesOnScroll();
+    });
 
-  // Threshold: berhenti tepat saat atas #swiper ketemu viewport
-  if (viewportBottom >= elementTop) {
-    stopped = true;
+    window.addEventListener('load', () => {
+      rotateImagesOnScroll();
+      scroll.update();
+    });
+  </script>
 
-    // Scroll paksa ke posisi awal #swiper
-    scroll.scrollTo(elementTop, { duration: 200 });
-    scroll.stop(); // hentikan animasi Locomotive
+  <!-- Anti Tembus Kebawah -->
+  <script>
+    const stopElement = document.querySelector('#swiper');
+    let locked = false;
 
-    // Blok input scroll mouse & sentuh
-    window.addEventListener('wheel', preventScroll, { passive: false });
-    window.addEventListener('touchmove', preventScroll, { passive: false });
-  }
-});
+    scroll.on('scroll', (obj) => {
+      if (!stopElement || locked) return;
 
-function preventScroll(e) {
-  e.preventDefault();
-}
-    </script>
-    <!-- Feather Icon JS -->
+      const scrollY = obj.scroll.y;
+      const elementTop = stopElement.offsetTop;
+      const viewportBottom = scrollY + window.innerHeight;
+
+      // Saat viewport menyentuh atas swiper
+      if (viewportBottom >= elementTop) {
+        locked = true;
+
+        // Snap ke swiper
+        scroll.scrollTo(stopElement, {
+          duration: 500,
+          easing: [0.25, 0.0, 0.35, 1.0]
+        });
+
+        // Hentikan sementara input user
+        function preventScroll(e) { e.preventDefault(); }
+        window.addEventListener('wheel', preventScroll, { passive: false });
+        window.addEventListener('touchmove', preventScroll, { passive: false });
+
+        // Lepas lock saat user scroll lagi (1 kali ekstra)
+        const release = () => {
+          locked = false;
+          window.removeEventListener('wheel', preventScroll, { passive: false });
+          window.removeEventListener('touchmove', preventScroll, { passive: false });
+          window.removeEventListener('wheel', release);
+          window.removeEventListener('touchend', release);
+        };
+
+        window.addEventListener('wheel', release, { passive: false });
+        window.addEventListener('touchend', release, { passive: false });
+      }
+    });
+
+    function preventScroll(e) {
+      e.preventDefault();
+    }
+  </script>
+  <!-- Feather Icon JS -->
   <script>
     feather.replace();
   </script>
+
 </html>
