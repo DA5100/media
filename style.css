@@ -348,8 +348,8 @@ body {
 
 /* Swiper */
 .swiper {
-  height: 100vh;
-  min-height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
   z-index: 1001;
 }
 
@@ -444,4 +444,5 @@ body {
     bottom: 5rem;
     right: 1rem;
   }
+
 }
