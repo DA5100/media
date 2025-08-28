@@ -160,7 +160,7 @@
       <span>5100</span>
     </div>
 
-    <div class="swiper .iframe-parent" id="swiper" data-scroll-section>
+    <div class="swiper iframe-parent" id="swiper" data-scroll-section>
       <iframe class="swiper-embed" src="slider.html" data-scroll data-scroll-speed="0"></iframe>
     </div>
 
@@ -256,7 +256,12 @@
 
     document.addEventListener('DOMContentLoaded', rotateImagesOnScroll);
     document.addEventListener('resize', rotateImagesOnScroll);
-    document.addEventListener('load', rotateImagesOnScroll);
+    document.addEventListener('load', rotateImagesOnScroll, 
+    setTimeout(() => {
+    scroll.update();
+    console.log("Locomotive updated, max scroll:", scroll.limit);
+  }, 800);
+                             );
 
   </script>
 
@@ -344,4 +349,5 @@
 
 
 </html>
+
 
