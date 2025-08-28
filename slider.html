@@ -6,6 +6,7 @@
   <title>Drama Arena Documentacion</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
   <style>
     .swiper {
       width: 100%;
@@ -56,11 +57,9 @@
 
       <div class="swiper-slide" style="background-image: url('src/img/full.webp')">
   <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
-    <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Susunan Acara</h2>
-    <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">Untuk Anda Yang Ingin Menonton Sesuai Urutan Acara.</p>
     <button
       onclick="openModal(this)"
-      class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+      class="fade-in-up delay-2 inline-flex items-center justify-center bg-transparent text-white hover:text-gray-200 p-6 transition-all"
       data-title="Susunan Acara"
       data-items='[
         { "text": "1. Visual Protokol", "url": "https://youtu.be/hXlo7nQZjxY" },
@@ -112,74 +111,70 @@
         { "text": "46. Pesan Terakhir : Penerimaan", "url": "#" },
         { "text": "47. Grand Closing : Pulang", "url": "#" }
       ]'
-      ]'
-    >
-      Tonton Sekarang
+      
+      <i data-feather="play" class="text-5x1"></i>
     </button>
+    <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Susunan Acara</h2>
+    <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">Untuk Anda Yang Ingin Menonton Sesuai Urutan Acara.</p>
   </div>
 </div>
 
       <!-- Slide 1 -->
       <div class="swiper-slide" style="background-image: url('src/img/musik.webp')">
         <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <button
+          onclick="openModal(this)"
+          class="fade-in-up delay-2 inline-flex items-center justify-center bg-transparent text-white hover:text-gray-200 p-6 transition-all"
+          data-title="Seni Musik"
+          data-items='[
+            { "text": "Hadroh", "url": "https://youtu.be/7PiVbvrq0bg" },
+            { "text": "Voice Musthafa : Sing-Off NASGOR", "url": "https://youtu.be/MnpHrKwrziM" },
+            { "text": "Choir-l-Ummah", "url": "https://youtu.be/jNuXFnJD_Jc" },
+            { "text": "NasyiDA", "url": "https://youtu.be/Z6yKgLmeHFU" }/,
+            { "text": "EQ Band : Bongkar", "url": "https://youtu.be/YayTBKqlf9c" },
+            { "text": "DA n DOET", "url": "https://youtu.be/igd5XM96o8Y" },
+            { "text": "EQ Band : Jangan Remehkan", "url": "https://youtu.be/A2tJRmZSsok" },
+            { "text": "Grand Closing : Pulang", "url": "#" }
+          ]'
+        <i data-feather="play" class="text-5x1"></i>
+          </button>
           <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Musik</h2>
             <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Nada-nada mengalun, menjadi jiwa di balik drama yang bicara tanpa kata."</p>
-            <button
-            onclick="openModal(this)"
-            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
-            data-title="Seni Musik"
-            data-items='[
-              { "text": "Hadroh", "url": "https://youtu.be/7PiVbvrq0bg" },
-              { "text": "Voice Musthafa : Sing-Off NASGOR", "url": "https://youtu.be/MnpHrKwrziM" },
-              { "text": "Choir-l-Ummah", "url": "https://youtu.be/jNuXFnJD_Jc" },
-              { "text": "NasyiDA", "url": "https://youtu.be/Z6yKgLmeHFU" }/,
-              { "text": "EQ Band : Bongkar", "url": "https://youtu.be/YayTBKqlf9c" },
-              { "text": "DA n DOET", "url": "https://youtu.be/igd5XM96o8Y" },
-              { "text": "EQ Band : Jangan Remehkan", "url": "https://youtu.be/A2tJRmZSsok" },
-              { "text": "Grand Closing : Pulang", "url": "#" }
-            ]'
-            >
-            Tonton Sekarang
-            </button>
-          </button>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="swiper-slide" style="background-image: url('src/img/teater.webp')">
         <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <button
+          onclick="openModal(this)"
+          class="fade-in-up delay-2 inline-flex items-center justify-center bg-transparent text-white hover:text-gray-200 p-6 transition-all"
+          data-title="Seni Teater"
+          data-items='[
+            { "text": "Drama Act 1 : Pesan Penyangkalan", "url": "https://youtu.be/oR-60WYF4lU" },
+            { "text": "T.O.J Tongue of Justice", "url": "https://youtu.be/fHhWwwlsulA" },
+            { "text": "Drama Act 2 : Pesan Amarah", "url": "https://youtu.be/w1wK2uySD0U" },
+            { "text": "Dialog : Identitas Gawat Darurat", "url": "https://youtu.be/YcBRYmWo3jc" },
+            { "text": "Drama Act 3 : Pesan Negoisasi", "url": "https://youtu.be/lepVoBRvhN8" },
+            { "text": "Ini Tok Show", "url": "#" },
+            { "text": "Phantomystica", "url": "https://youtu.be/iB2ALafaFBs" },
+            { "text": "Maqsop D.K.I", "url": "https://youtu.be/Q3SO1bwu4yc" },
+            { "text": "Drama Act 4 : Pesan Peringatan", "url": "https://youtu.be/71G6p7H9VHQ" },
+            { "text": "Pesan Terakhir : Penerimaan", "url": "#" }
+          ]'
+        <i data-feather="play" class="text-5x1"></i>
+        </button>
           <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Teater</h2>
           <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Seni teater di Drama Arena berdenyut dalam cahaya, menjelmakan kata menjadi jiwa di atas panggung."</p>
-            <button
-            onclick="openModal(this)"
-            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
-            data-title="Seni Teater"
-            data-items='[
-              { "text": "Drama Act 1 : Pesan Penyangkalan", "url": "https://youtu.be/oR-60WYF4lU" },
-              { "text": "T.O.J Tongue of Justice", "url": "https://youtu.be/fHhWwwlsulA" },
-              { "text": "Drama Act 2 : Pesan Amarah", "url": "https://youtu.be/w1wK2uySD0U" },
-              { "text": "Dialog : Identitas Gawat Darurat", "url": "https://youtu.be/YcBRYmWo3jc" },
-              { "text": "Drama Act 3 : Pesan Negoisasi", "url": "https://youtu.be/lepVoBRvhN8" },
-              { "text": "Ini Tok Show", "url": "#" },
-              { "text": "Phantomystica", "url": "https://youtu.be/iB2ALafaFBs" },
-              { "text": "Maqsop D.K.I", "url": "https://youtu.be/Q3SO1bwu4yc" },
-              { "text": "Drama Act 4 : Pesan Peringatan", "url": "https://youtu.be/71G6p7H9VHQ" },
-              { "text": "Pesan Terakhir : Penerimaan", "url": "#" }
-            ]'
-          >
-            Tonton Sekarang
-          </button>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="swiper-slide" style="background-image: url('src/img/tari.webp')">
         <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
-          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Tari</h2>
-          <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Gerak tari di Drama Arena menari bersama cerita, menyulam emosi dalam setiap langkahnya."</p>
           <button
             onclick="openModal(this)"
-            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
+            class="fade-in-up delay-2 inline-flex items-center justify-center bg-transparent text-white hover:text-gray-200 p-6 transition-all"
             data-title="Seni Tari"
             data-items='[
               { "text": "Grand Opening", "url": "https://youtu.be/Ls87JotR75w" },
@@ -197,41 +192,41 @@
               { "text": "Slava Rhythm", "url": "https://youtu.be/Fn5Y5PnEotg" },
               { "text": "ZonZero", "url": "https://youtu.be/sFcwS8ooqWc" }
             ]'
-          >
-            Tonton Sekarang
+          <i data-feather="play" class="text-5x1"></i>
           </button>
+          <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Tari</h2>
+          <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Gerak tari di Drama Arena menari bersama cerita, menyulam emosi dalam setiap langkahnya."</p>
         </div>
       </div>
 
       <!-- Slide 4 -->
       <div class="swiper-slide" style="background-image: url('src/img/rupa.webp')">
         <div class="text-wrapper relative flex flex-col justify-end h-full bg-black/40 p-6 md:p-12">
+          <button
+          onclick="openModal(this)"
+          class="fade-in-up delay-2 inline-flex items-center justify-center bg-transparent text-white hover:text-gray-200 p-6 transition-all"
+          data-title="Seni Rupa"
+          data-items='[
+            { "text": "Visual Protokol", "url": "https://youtu.be/hXlo7nQZjxY" },
+            { "text": "Visual Opening", "url": "https://youtu.be/2E-ngdbbQPQ" },
+            { "text": "Visual Sapa Mc", "url": "https://youtu.be/2E-ngdbbQPQ" },
+            { "text": "Master of Ceremony", "url": "https://youtu.be/Xda_vY3J9DM" },
+            { "text": "Tilawah Ayat Suci Al-Quran", "url": "https://youtu.be/Hzux41Q7vs0" },
+            { "text": "Sambutan Ketua Drama Arena", "url": "https://youtu.be/5lkoaDqzKNk" },
+            { "text": "Sambutan Pimpinan", "url": "https://youtu.be/L7KN6vHYwrM" },
+            { "text": "Visual : Five Assemble", "url": "https://youtu.be/oj5Hr2AkryI" },
+            { "text": "Visual-Pesan Pertama", "url": "#" },
+            { "text": "Visual Nyatakan Kebenaran", "url": "#" },
+            { "text": "MC Non Formal", "url": "https://youtu.be/mmV8zjLHrnc" },
+            { "text": "Visual : Nusantara Berpadu Ria", "url": "https://youtu.be/zLs3WyRsOX4" },
+            { "text": "Visual : Milliu Membentuk Perilaku", "url": "https://youtu.be/k8f0DLWpNp8" },
+            { "text": "Iklan Aqalin", "url": "https://youtu.be/UxgaHukh3SI" },
+            { "text": "Visual : Ceritanya Berakhir", "url": "#" }
+          ]'
+          <i data-feather="play" class="text-5x1"></i>
+        </button>
           <h2 class="fade-in-up delay-0 text-3xl md:text-5xl font-bold mb-4">Seni Rupa</h2>
           <p class="fade-in-up delay-1 text-base md:text-lg mb-6 max-w-md">"Seni rupa dalam acara Drama Arena menjadi elemen visual yang memperkuat nuansa dan mendukung estetika pertunjukan secara keseluruhan."</p>
-            <button
-            onclick="openModal(this)"
-            class="fade-in-up delay-2 inline-block bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition-all"
-            data-title="Seni Rupa"
-            data-items='[
-              { "text": "Visual Protokol", "url": "https://youtu.be/hXlo7nQZjxY" },
-              { "text": "Visual Opening", "url": "https://youtu.be/2E-ngdbbQPQ" },
-              { "text": "Visual Sapa Mc", "url": "https://youtu.be/2E-ngdbbQPQ" },
-              { "text": "Master of Ceremony", "url": "https://youtu.be/Xda_vY3J9DM" },
-              { "text": "Tilawah Ayat Suci Al-Quran", "url": "https://youtu.be/Hzux41Q7vs0" },
-              { "text": "Sambutan Ketua Drama Arena", "url": "https://youtu.be/5lkoaDqzKNk" },
-              { "text": "Sambutan Pimpinan", "url": "https://youtu.be/L7KN6vHYwrM" },
-              { "text": "Visual : Five Assemble", "url": "https://youtu.be/oj5Hr2AkryI" },
-              { "text": "Visual-Pesan Pertama", "url": "#" },
-              { "text": "Visual Nyatakan Kebenaran", "url": "#" },
-              { "text": "MC Non Formal", "url": "https://youtu.be/mmV8zjLHrnc" },
-              { "text": "Visual : Nusantara Berpadu Ria", "url": "https://youtu.be/zLs3WyRsOX4" },
-              { "text": "Visual : Milliu Membentuk Perilaku", "url": "https://youtu.be/k8f0DLWpNp8" },
-              { "text": "Iklan Aqalin", "url": "https://youtu.be/UxgaHukh3SI" },
-              { "text": "Visual : Ceritanya Berakhir", "url": "#" }
-            ]'
-          >
-            Tonton Sekarang
-          </button>
         </div>
       </div>
 
