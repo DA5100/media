@@ -256,12 +256,7 @@
 
     document.addEventListener('DOMContentLoaded', rotateImagesOnScroll);
     document.addEventListener('resize', rotateImagesOnScroll);
-    document.addEventListener('load', rotateImagesOnScroll, 
-    setTimeout(() => {
-    scroll.update();
-    console.log("Locomotive updated, max scroll:", scroll.limit);
-  }, 800);
-                             );
+    document.addEventListener('load', rotateImagesOnScroll);
 
   </script>
 
