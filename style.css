@@ -450,3 +450,7 @@ body {
 
 }
 
+[data-scroll-container] {
+  min-height: 100vh; /* Ensure the scroll container is tall enough */
+  overflow: visible;
+}

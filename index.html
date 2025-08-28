@@ -279,16 +279,17 @@
         multiplier: 1,
         breakpoint: 0            // aktifkan untuk tablet juga
       },
-      reloadOnContextChange: true
+      reloadOnContextChange: false
     });
 
-    scroll.on('scroll', () => {
+    scroll.on('scroll', (event) => {
+      console.log(event)
       rotateImagesOnScroll();
     });
 
     window.addEventListener('load', () => {
-      rotateImagesOnScroll();
       scroll.update();
+      rotateImagesOnScroll();
     });
   </script>
 
